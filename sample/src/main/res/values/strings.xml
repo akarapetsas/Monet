@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Monet</string>
+    <string name="no_images_error_message">No Images</string>
+</resources>
