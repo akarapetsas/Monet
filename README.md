@@ -6,5 +6,6 @@ the L2 disk caching that Volley offers through the HTTP headers
 by running the sample app.
 
 Features to be added soon:
+
 1. Support of Gson library.
 2. Configurable L1 disk cache.
