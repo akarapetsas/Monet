@@ -5,6 +5,8 @@ the L2 disk caching that Volley offers through the HTTP headers
 "Cache-Control" and "Expires". You can see the library in action 
 by running the sample app.
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Monet-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2572)
+
 
 ## Instatiation
 
