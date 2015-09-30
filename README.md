@@ -8,7 +8,7 @@ by running the sample app.
 
 ## Instatiation
 
-For instantiating Monet you have to either extend the MonetApplication class and add the class package into the application tag of the AndroidManifest.xml file:
+For instantiating Monet you have either to extend the MonetApplication class and add the class package into the application tag of the AndroidManifest.xml file:
 
 ```java
 public class SampleApplication extends MonetApplication {
@@ -21,7 +21,7 @@ public class SampleApplication extends MonetApplication {
         android:name=".SampleApplication"
 ```
 
-Or, to call the 	Monet.INSTANCE.init(context) method, preferably when your application is starting:
+Or, to call the Monet.INSTANCE.init(context) method, preferably when your application is starting:
 
 ```java
 import android.app.Application;
@@ -84,6 +84,15 @@ public class ImagesFragment extends Fragment implements Response.Listener<Respon
 ```
 
 Where Response is the POJO class which is using the Jackson lib and will bind the response. Also, for receiving either the succesfull or the error response you have to implement the onResponse and onErrorResponse callbacks respectively.
+
+## Run sample app
+In order to run the sample app you have to register a new app with the Shutterstock API and replace the clied_id and the secret_id in the fields below that they are available in the CategoriesFragment class.
+
+```java
+
+    private final static String SHUTTERSTOCK_CLIENT_ID = ""; 
+    private final static String SHUTTERSTOCK_CLIENT_SECRET = "";
+```
 
 ## Features to be added soon:
 
