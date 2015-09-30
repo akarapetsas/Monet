@@ -34,8 +34,7 @@ public class YourAppApplication extends Application {
 		super.onCreate();
 
 		instance = this;
-		//Instantiate the volleyRequest once and only once
-		// when the application is starting.
+		// Instantiate Monet once and only once when the application is starting.
 		Monet.INSTANCE.init(instance);
 	}
 
@@ -53,7 +52,6 @@ For executing a network call and receive the response:
 ```java
 public class ImagesFragment extends Fragment implements Response.Listener<Response>, ErrorListener {
 
-
 	public void yourMethod() {
 
 		//create and execute a jackson request
@@ -65,7 +63,6 @@ public class ImagesFragment extends Fragment implements Response.Listener<Respon
 				.setErrorListener(ImagesFragment.this)
 				.setTag(ImagesFragment.class.getName())
 				.execute();
-
 	}
 
 
@@ -78,8 +75,7 @@ public class ImagesFragment extends Fragment implements Response.Listener<Respon
 	public void onResponse(Response response) {
 		// process with the response
 	}
-	
-	
+}	
 
 ```
 
@@ -89,9 +85,8 @@ Where Response is the POJO class which is using the Jackson lib and will bind th
 In order to run the sample app you have to register a new app with the Shutterstock API and replace the clied_id and the secret_id in the fields below that they are available in the CategoriesFragment class.
 
 ```java
-
-    private final static String SHUTTERSTOCK_CLIENT_ID = ""; 
-    private final static String SHUTTERSTOCK_CLIENT_SECRET = "";
+private final static String SHUTTERSTOCK_CLIENT_ID = ""; 
+private final static String SHUTTERSTOCK_CLIENT_SECRET = "";
 ```
 
 ## Features to be added soon:
