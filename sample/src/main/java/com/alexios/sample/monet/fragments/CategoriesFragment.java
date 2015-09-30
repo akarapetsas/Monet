@@ -122,7 +122,8 @@ public class CategoriesFragment extends Fragment implements Response.Listener<Ca
 		HashMap<String, String> params = new HashMap<>();
 		//passing the Client ID and the Client Secret
 
-		String authInfo = "f58688d39233e8575717:a2384929485096a98090be8d0811280e9c4240b4";
+		//replace the authInfo with your client_id:client_secret
+		String authInfo = "";
 		String auth = "Basic " + Base64.encodeToString(authInfo.getBytes(), Base64.NO_WRAP);
 		params.put("Authorization", auth);
 
