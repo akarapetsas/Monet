@@ -32,6 +32,8 @@ public class CategoriesFragment extends Fragment implements Response.Listener<Ca
 	public static final String REQUESTED_URL_BUNDLE = "RequestedUrl";
 	public static final String DOWNLOADING_CATEGORIES = "Downloading categories";
 	public static final String PLEASE_WAIT = "Please wait...";
+	private final static String SHUTTERSTOCK_CLIENT_ID = "";
+	private final static String SHUTTERSTOCK_CLIENT_SECRET = "";
 
 	private ListView categoriesList;
 	private ProgressDialog dialog;
@@ -118,12 +120,13 @@ public class CategoriesFragment extends Fragment implements Response.Listener<Ca
 
 	}
 
-	public static Map<String, String> basicAuth(){
+	public static Map<String, String> basicAuth() {
 		HashMap<String, String> params = new HashMap<>();
 		//passing the Client ID and the Client Secret
 
 		//replace the authInfo with your client_id:client_secret
-		String authInfo = "";
+
+		String authInfo = SHUTTERSTOCK_CLIENT_ID + ":" + SHUTTERSTOCK_CLIENT_SECRET;
 		String auth = "Basic " + Base64.encodeToString(authInfo.getBytes(), Base64.NO_WRAP);
 		params.put("Authorization", auth);
 
