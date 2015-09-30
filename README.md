@@ -48,22 +48,7 @@ public class YourAppApplication extends Application {
 
 ## Example Usage
 
-For executing a network call:
-
-```java
-JacksonRequest.<Response>builder()
-				.setHttpMethod(Request.Method.GET)
-				.setUrl(URL)
-				.setResponseType(Response.class)
-				.setListener(ImagesFragment.this)
-				.setErrorListener(ImagesFragment.this)
-				//optionally set a tag for this specific network call
-				.setTag(ImagesFragment.class.getName())
-				.execute();
-				
-```
-Where Response is the POJO class which is using the Jackson library and will bind the response.
-For receiving either the succesfull or the error response you have to implement the necessary callback methods.
+For executing a network call and receive the response:
 
 ```java
 public class ImagesFragment extends Fragment implements Response.Listener<Response>, ErrorListener {
